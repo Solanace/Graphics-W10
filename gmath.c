@@ -36,6 +36,12 @@ color calculate_ambient(color alight, double *areflect) {
 
 color calculate_diffuse(double light[2][3], double *dreflect, double *normal) {
 	color d;
+	if (dot_product(normal, light[LOCATION]) < 0) {
+		d.red = 0;
+		d.green = 0;
+		d.blue = 0;
+		return d;
+	}
 	d.red = light[COLOR][RED] * dreflect[RED] * dot_product(normal, light[LOCATION]);
 	d.green = light[COLOR][GREEN] * dreflect[GREEN] * dot_product(normal, light[LOCATION]);
 	d.blue = light[COLOR][BLUE] * dreflect[BLUE] * dot_product(normal, light[LOCATION]);
@@ -46,6 +52,12 @@ color calculate_diffuse(double light[2][3], double *dreflect, double *normal) {
 color calculate_specular(double light[2][3], double *sreflect, double *view, double *normal) {
 	color s;
 	double cons = 2 * dot_product(normal, light[LOCATION]);
+	if (cons < 0) {
+		s.red = 0;
+		s.green = 0;
+		s.blue = 0;
+		return s;
+	}
 	double temp[3];
 	temp[0] = cons * normal[0] - light[LOCATION][0];
 	temp[1] = cons * normal[1] - light[LOCATION][1];
