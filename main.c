@@ -47,7 +47,32 @@ int main(int argc, char **argv) {
   sreflect[RED] = 0.5;
   sreflect[GREEN] = 0.5;
   sreflect[BLUE] = 0.5;
+  
+  /* For the image:
+  light[LOCATION][0] = 0;
+  light[LOCATION][1] = 1;
+  light[LOCATION][2] = 2;
 
+  light[COLOR][RED] = 190;
+  light[COLOR][GREEN] = 89;
+  light[COLOR][BLUE] = 43;
+
+  view[0] = 0;
+  view[1] = 0;
+  view[2] = 1;
+
+  areflect[RED] = 0.8;
+  areflect[GREEN] = 0.1;
+  areflect[BLUE] = 0.1;
+
+  dreflect[RED] = 0.5;
+  dreflect[GREEN] = 0.5;
+  dreflect[BLUE] = 0.5;
+
+  sreflect[RED] = 0.8;
+  sreflect[GREEN] = 0.8;
+  sreflect[BLUE] = 0.8;
+  */
 
 
   screen s;

@@ -1,0 +1,58 @@
+# Bowl
+push
+move
+250 150 0
+rotate
+x 50
+rotate
+y 20
+torus
+0 0 0 12 10
+torus
+0 0 0 12 30
+torus
+0 0 0 12 50
+torus
+0 0 0 12 70
+torus
+0 0 0 12 90
+torus
+0 10 0 12 110
+torus
+0 20 0 12 120
+torus
+0 40 0 12 130
+torus
+0 60 0 12 140
+torus
+0 80 0 12 150
+# Whoppers
+push
+move
+30 42 27
+sphere
+0 0 0 30
+move
+-81 0 18
+sphere
+0 0 0 30
+move
+45 0 -70
+sphere
+0 0 0 30
+pop
+# Chopsticks
+push
+move
+80 112 250
+box
+0 0 0 10 10 500
+move
+13 0 0
+box
+0 0 0 10 10 500
+pop
+pop
+display
+save
+pic.png
